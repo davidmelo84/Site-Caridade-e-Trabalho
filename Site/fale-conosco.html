@@ -1,104 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <title>Centro Espírita Caridade e Trabalho</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/form.css">
 </head>
-<script src="funcoes.js"></script>
 <body>
     <div id="interface">
 
+        <!-- Cabeçalho -->
         <header id="cabecalho">
             <hgroup>
                 <h1>Caridade e Trabalho</h1>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
                 <h2>Centro Espírita</h2>
             </hgroup>
-            <img id="pomba1" src="imagem/10.png">
-            <img id="pomba2" src="imagem/11.png">
-            </figure>
+            <img id="pomba1" src="imagem/10.png" alt="Pomba">
+            <img id="pomba2" src="imagem/11.png" alt="Pomba">
             <nav id="menu">
-                <h1>Menu Principal</h1>
-                <ol>
-                    <li onmouseover="mudaFoto('imagem/home.png')" onmouseout="mudaFoto('imagem/contato.png')"><a href="caridade.html">Home</a></li>
-                    <li onmouseover="mudaFoto('imagem/jornal.png')" onmouseout="mudaFoto('imagem/contato.png')"><a href="history.html">História</a></li>
-                    <li onmouseover="mudaFoto('imagem/fotos.png')" onmouseout="mudaFoto('imagem/contato.png')"><a href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('imagem/multimidia.png')" onmouseout="mudaFoto('imagem/contato.png')"><a href="multimidia.html">Multimídia</a></li>
-                    <li onmouseover="mudaFoto('imagem/contato.png')" onmouseout="mudaFoto('imagem/contato.png')"><a href="fale-conosco.html">Fale Conosco</a></li>
-                </ol>
+                <h2>Menu Principal</h2>
+                <ul>
+                    <li onmouseover="mudaFoto('imagem/home.png')" onmouseout="mudaFoto('imagem/11.png')"><a href="caridade.html">Home</a></li>
+                    <li onmouseover="mudaFoto('imagem/jornal.png')" onmouseout="mudaFoto('imagem/11.png')"><a href="history.html">História</a></li>
+                    <li onmouseover="mudaFoto('imagem/fotos.png')" onmouseout="mudaFoto('imagem/11.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('imagem/multimidia.png')" onmouseout="mudaFoto('imagem/11.png')"><a href="multimidia.html">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('imagem/contato.png')" onmouseout="mudaFoto('imagem/11.png')"><a href="fale-conosco.html">Fale Conosco</a></li>
+                </ul>
             </nav>
         </header>
-        <form method="post" id="fContato" action="mailto:contato@caridade.com">
-            <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-               <p><label for="cNome">Nome:</label><input name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
-               <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"></p>
-               <p><label for="cEmail">E-mail:</label><input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="E-mail"></p>
-              <fieldset id="sexo"><legend>Sexo:</legend>
-                 <input type="radio" name="tSexo" id="cMasc"><label for="cMasc">Masculino</label><br>
-                 <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
-                 </fieldset>
-                 <p>Data de Nascimento: <input type="date" name="tData" id="cData"></p>
-            </fieldset>
 
-           <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-               <p><label for="cRua">Logradouro:</label><input name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Travessa ..."></p>
-               <p><label for="cNumero">Número:</label><input type="number" name="tNumero" id="cNumero" min="0" max="9999999"></p>
-               <p><label for="cEst">Estado:</label><select name="tEst" id="cEst"> 
-                
-                <optgroup label="Região Nordeste">
-                   <option value="BA">Bahia</option></optgroup>
-                <optgroup label="Região Sudeste">
-                   <option value="SP">São Paulo</option>
-                   <option value="RJ">Rio de Janeiro</option>
-                   <option value="MG">Minas Gerais</option>
-                   <option value="PR">Paraná</option></optgroup>    
-                <optgroup label="Região Sul">
-                    <option value="SC">Santa Catarina</option>
-                    <option value="RS">Rio Grande do Sul</option></optgroup>
-               </select></p>
-               <p><label for="cCid">Cidade:</label><input name="tCid" id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" list="cidades"></p>
-               <datalist id="cidades">
-                   <option value="Rio de Janeiro"></option>
-                   <option value="Nova iguaçu"></option>
-                   <option value="Niterói"></option>
-                   <option value="Belford Roxo"></option>
-               </datalist>
-           </fieldset> 
+        <!-- Corpo da Página -->
+        <section id="corpo">
+            <article id="noticia-principal">
+                <header id="cabecalho-artigo">
+                    <hgroup>
+                        <h3>Espiritismo > Centro Espírita</h3>
+                        <h1>Saiba tudo sobre o Centro Espírita - Caridade e Trabalho</h1>
+                        <h2>por David Montenegro</h2>
+                        <h3 class="direita">Atualizado em </h3>
+                    </hgroup>
+                </header>
 
-           <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-               <p><label for="cUrg">Grau de Urgência:</label>Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10">Máx</p>
-               <p><label for="cMsg">Mensagem:</label><textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
-            </fieldset>
+                <section id="conteudo">
+                    <h2>Sobre</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur congue venenatis...</p>
 
-            <fieldset id="doacao"><legend>Quero ajudar o Caridade e Trabalho</legend>
-              <p><input type="checkbox" name="tGost" id="cGost" checked>
-                <label for="cGost">Gostaria de ajudar o caridade e trabalho</label></p>
-              <p><label for="cVal">Valor R$:</label><input name="tVal" id="cVal" placeholder="Insira o valor a ser doado"></p>
-            </fieldset>
-              <input type="image" name="tEnviar" src="imagem/botao-enviar.png">
-        </form>
+                    <h2>Fundação</h2>
+                    <p>Sed aliquet nunc nec diam ultricies, nec tempor sem posuere. Etiam vitae est sagittis...</p>
 
+                    <h2>Quem somos</h2>
+                    <p>Suspendisse accumsan, tellus a feugiat mattis, nulla erat luctus dolor, et ultrices...</p>
 
+                    <h2>Objetivo</h2>
+                    <p>Nulla lorem ante, consectetur in suscipit ac, fringilla scelerisque neque. Nulla quam...</p>
 
+                    <figure class="foto-legenda">
+                        <img src="imagem/1.jpg" alt="Jesus">
+                        <figcaption><strong>JESUS, exemplo de amor e caridade!</strong></figcaption>
+                    </figure>
+                </section>
+            </article>
+        </section>
 
+        <!-- Lateral -->
+        <aside id="lateral">
+            <h2>Localização</h2>
+            <p>Localizado R. 14-Quadra 10- Castelo Branco | 3ª Etapa | St. 01, 2-194 - Castelo Branco, Salvador - BA, 41321-045, Brazil, CEP 41321-045, Brasil</p>
+        </aside>
 
-
+        <!-- Rodapé -->
         <footer id="rodape">
             <p>Copyright &copy; 2023 - by David Montenegro <br/>
-               <a href="https://youtube.com/shorts/m5VJV0SDC48?si=Bir-x8UpKebwSgnD" target="_blank">Facebook</a> | <a href="https://youtube.com/shorts/ZZRRRDsGY0o?si=hSqHCJJ1V4msmPgy" target="_blank">Twitter</a> </p>
+               <a href="https://youtube.com/shorts/m5VJV0SDC48?si=Bir-x8UpKebwSgnD" target="_blank">Facebook</a> | <a href="https://youtube.com/shorts/ZZRRRDsGY0o?si=hSqHCJJ1V4msmPgy" target="_blank">Twitter</a></p>
         </footer>
 
     </div>
 
-
+    <!-- Script -->
+    <script src="funcoes.js"></script>
 </body>
-
 </html>
